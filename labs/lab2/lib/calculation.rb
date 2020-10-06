@@ -2,13 +2,13 @@ class Calculation
   def self.run(input_arg, array_of_string)
     case input_arg
     when 1
-      puts search_max(array_of_string)
+      search_max(array_of_string)
     when 2
-      puts search_min(array_of_string)
+      search_min(array_of_string)
     when 3
-      puts search_mean(array_of_string)
+      search_mean(array_of_string)
     when 4
-      puts search_corrected_sample_variance(array_of_string)
+      search_corrected_sample_variance(array_of_string)
     end
   end
 

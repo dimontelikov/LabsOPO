@@ -1,25 +1,26 @@
 require './lib/conversion'
 
 RSpec.describe Conversion do
-  it 'Conversion С in С' do
-    expect(Conversion.run_conversion(0, 'C', 'C')).to eq(0)
-  end
-  it 'Conversion С in F' do
-    expect(Conversion.run_conversion(0, 'C', 'F')).to eq(32)
-  end
-  it 'Conversion С in F' do
-    expect(Conversion.run_conversion(32.0, 'C', 'F')).to eq(89.6)
-  end
-  it 'Conversion K in C' do
-    expect(Conversion.run_conversion(273.15, 'K', 'C')).to eq(0)
-  end
-  it 'Conversion K in K' do
-    expect(Conversion.run_conversion(273.15, 'K', 'K')).to eq(273.15)
-  end
-  it 'Conversion K in F' do
-    expect(Conversion.run_conversion(0, 'K', 'F')).to eq(-459.67)
-  end
-  it 'Conversion F in C' do
-    expect(Conversion.run_conversion(0, 'F', 'C')).to eq(-17.77777777777778)
+  describe '.run_conversion' do
+    let(:run_C_C) { Conversion.run_conversion(0, 'C', 'C') }
+    let(:run_C_F) { Conversion.run_conversion(0, 'C', 'F') }
+    let(:run_K_C) { Conversion.run_conversion(273.15, 'K', 'C') }
+    let(:run_K_F) { Conversion.run_conversion(0, 'K', 'F') }
+    let(:run_F_C) { Conversion.run_conversion(0, 'F', 'C') }
+    context 'conversion_C_C' do
+      it { expect(run_C_C).to eq(0) }
+    end
+    context 'conversion_C_F' do
+      it { expect(run_C_F).to eq(32) }
+    end
+    context 'conversion_K_C' do
+      it { expect(run_K_C).to eq(0) }
+    end
+    context 'conversion_K_F' do
+      it { expect(run_K_F).to eq(-459.67) }
+    end
+    context 'conversion_F_C' do
+      it { expect(run_F_C).to eq(-17.77777777777778) }
+    end
   end
 end

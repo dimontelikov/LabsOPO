@@ -4,11 +4,11 @@ class Main
   def self.main
     number_oper = input_arg
     array_of_string = file_processing
-    Calculation.run(number_oper, array_of_string)
+    puts Calculation.run(number_oper, array_of_string)
   end
 
   def self.file_processing
-    file = File.new('file.csv', 'r:UTF-8')
+    file = File.new('exm.csv', 'r:UTF-8')
     array_of_string = file.readlines
     array_of_string.shift(3) # delete the three first lines
 

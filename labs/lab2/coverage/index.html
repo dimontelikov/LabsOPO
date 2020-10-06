@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <title>Code coverage for Lab1</title>
+    <title>Code coverage for Lab2</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.12.2/application.js' type='text/javascript'></script>
     <link href='./assets/0.12.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css' />
@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-10-06T19:55:43+07:00">2020-10-06T19:55:43+07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-10-06T19:56:16+07:00">2020-10-06T19:56:16+07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  91.3%
+  100.0%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.48
+         2.13
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>23</b> relevant lines,
-    <span class="green"><b>21</b> lines covered</span> and
-    <span class="red"><b>2</b> lines missed. </span>
+    <b>31</b> relevant lines,
+    <span class="green"><b>31</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
-  91.3%
+  100.0%
 </span>
 )
   </div>
@@ -71,13 +71,13 @@
       <tbody>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#d115dd6ce6d88deb7035fcfec9af3bc4a16a9039" class="src_link" title="lib/conversion.rb">lib/conversion.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">91.30 %</td>
-            <td class="cell--number">48</td>
-            <td class="cell--number">23</td>
-            <td class="cell--number">21</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">1.48</td>
+            <td class="strong t-file__name"><a href="#39bfadec376976035facb82f6526f2df7b2b6c7a" class="src_link" title="lib/calculation.rb">lib/calculation.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">53</td>
+            <td class="cell--number">31</td>
+            <td class="cell--number">31</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">2.13</td>
             
           </tr>
         
@@ -98,12 +98,12 @@
 
       <div class="source_files">
       
-        <div class="source_table" id="d115dd6ce6d88deb7035fcfec9af3bc4a16a9039">
+        <div class="source_table" id="39bfadec376976035facb82f6526f2df7b2b6c7a">
   <div class="header">
-    <h3>lib/conversion.rb</h3>
+    <h3>lib/calculation.rb</h3>
     <h4>
       <span class="green">
-  91.3%
+  100.0%
 </span>
 
       lines covered
@@ -112,9 +112,9 @@
     
 
     <div class="t-line-summary">
-      <b>23</b> relevant lines.
-      <span class="green"><b>21</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>31</b> relevant lines.
+      <span class="green"><b>31</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -131,7 +131,7 @@
 
             
 
-            <code class="ruby">class Conversion</code>
+            <code class="ruby">class Calculation</code>
           </li>
         </div>
       
@@ -142,18 +142,18 @@
 
             
 
-            <code class="ruby">  def self.run_conversion(number_temp, scale_one, scale_two)</code>
+            <code class="ruby">  def self.run(input_arg, array_of_string)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="3">
-            <span class="hits">5</span>
+          <li class="covered" data-hits="4" data-linenumber="3">
+            <span class="hits">4</span>
             
 
             
 
-            <code class="ruby">    return number_temp if scale_one == scale_two</code>
+            <code class="ruby">    case input_arg</code>
           </li>
         </div>
       
@@ -164,18 +164,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    when 1</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="5">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    case scale_one</code>
+            <code class="ruby">      search_max(array_of_string)</code>
           </li>
         </div>
       
@@ -186,7 +186,7 @@
 
             
 
-            <code class="ruby">    when &#39;C&#39;</code>
+            <code class="ruby">    when 2</code>
           </li>
         </div>
       
@@ -197,7 +197,7 @@
 
             
 
-            <code class="ruby">      result = conversion_c(number_temp, scale_two)</code>
+            <code class="ruby">      search_min(array_of_string)</code>
           </li>
         </div>
       
@@ -208,18 +208,18 @@
 
             
 
-            <code class="ruby">    when &#39;K&#39;</code>
+            <code class="ruby">    when 3</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="9">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      result = conversion_k(number_temp, scale_two)</code>
+            <code class="ruby">      search_mean(array_of_string)</code>
           </li>
         </div>
       
@@ -230,7 +230,7 @@
 
             
 
-            <code class="ruby">    when &#39;F&#39;</code>
+            <code class="ruby">    when 4</code>
           </li>
         </div>
       
@@ -241,7 +241,7 @@
 
             
 
-            <code class="ruby">      result = conversion_f(number_temp, scale_two)</code>
+            <code class="ruby">      search_corrected_sample_variance(array_of_string)</code>
           </li>
         </div>
       
@@ -263,40 +263,40 @@
 
             
 
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="4" data-linenumber="14">
-            <span class="hits">4</span>
-            
-
-            
-
-            <code class="ruby">    result</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="15">
-            
-            
-
-            
-
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="14">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.search_max(array_of_string)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    max = array_of_string[0]</code>
           </li>
         </div>
       
@@ -307,18 +307,18 @@
 
             
 
-            <code class="ruby">  def self.conversion_c(number_temp, scale_two)</code>
+            <code class="ruby">    (1..array_of_string.length - 1).each do |i|</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="6" data-linenumber="18">
+            <span class="hits">6</span>
             
 
             
 
-            <code class="ruby">    case scale_two</code>
+            <code class="ruby">      max = array_of_string[i] if max.split(&#39;,&#39;)[1].to_i &lt; array_of_string[i].split(&#39;,&#39;)[1].to_i</code>
           </li>
         </div>
       
@@ -329,18 +329,18 @@
 
             
 
-            <code class="ruby">    when &#39;K&#39;</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="20">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">      number_temp = number_temp.to_f + 273.15</code>
+            
+
+            <code class="ruby">    max</code>
           </li>
         </div>
       
@@ -351,40 +351,40 @@
 
             
 
-            <code class="ruby">    when &#39;F&#39;</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="22">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      number_temp = number_temp.to_f * 1.8 + 32</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="23">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="24">
+          <li class="never" data-hits="" data-linenumber="22">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.search_min(array_of_string)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="24">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    min = array_of_string[0]</code>
           </li>
         </div>
       
@@ -395,18 +395,18 @@
 
             
 
-            <code class="ruby">    number_temp</code>
+            <code class="ruby">    (1..array_of_string.length - 1).each do |i|</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
-            
-            
-
+          <li class="covered" data-hits="6" data-linenumber="26">
+            <span class="hits">6</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">      min = array_of_string[i] if min.split(&#39;,&#39;)[1].to_i &gt; array_of_string[i].split(&#39;,&#39;)[1].to_i</code>
           </li>
         </div>
       
@@ -417,29 +417,29 @@
 
             
 
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="28">
+          <li class="covered" data-hits="1" data-linenumber="29">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def self.conversion_k(number_temp, scale_two)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="29">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    case scale_two</code>
+            <code class="ruby">    min</code>
           </li>
         </div>
       
@@ -450,56 +450,12 @@
 
             
 
-            <code class="ruby">    when &#39;C&#39;</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="31">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      number_temp = number_temp.to_f - 273.15</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="32">
-            
-            
-
-            
-
-            <code class="ruby">    when &#39;F&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="33">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      number_temp = number_temp.to_f * 1.8 - 459.67</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="34">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="35">
+          <li class="never" data-hits="" data-linenumber="31">
             
             
 
@@ -510,24 +466,68 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="36">
+          <li class="covered" data-hits="1" data-linenumber="32">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.search_mean(array_of_string)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="33">
             <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    number_temp</code>
+            <code class="ruby">    sum = 0</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="37">
+          <li class="covered" data-hits="2" data-linenumber="34">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    (0..array_of_string.length - 1).each do |i|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="14" data-linenumber="35">
+            <span class="hits">14</span>
+            
+
+            
+
+            <code class="ruby">      sum += array_of_string[i].split(&#39;,&#39;)[1].to_f</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="36">
             
             
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="37">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    sum / array_of_string.length</code>
           </li>
         </div>
       
@@ -538,18 +538,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="39">
+            
             
 
             
 
-            <code class="ruby">  def self.conversion_f(number_temp, scale_two)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -560,18 +560,18 @@
 
             
 
-            <code class="ruby">    case scale_two</code>
+            <code class="ruby">  def self.search_the_difference_amount(array_of_string, mean)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="41">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    when &#39;C&#39;</code>
+            
+
+            <code class="ruby">    result = 0</code>
           </li>
         </div>
       
@@ -582,34 +582,23 @@
 
             
 
-            <code class="ruby">      number_temp = (number_temp.to_f - 32) / 1.8</code>
+            <code class="ruby">    (0..array_of_string.length - 1).each do |i|</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
-            
-            
-
+          <li class="covered" data-hits="7" data-linenumber="43">
+            <span class="hits">7</span>
             
 
-            <code class="ruby">    when &#39;K&#39;</code>
+            
+
+            <code class="ruby">      result += (array_of_string[i].split(&#39;,&#39;)[1].to_f - mean)**2</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="44">
-            
-            
-
-            
-
-            <code class="ruby">      number_temp = (number_temp.to_f + 459.67) / 1.8</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="45">
+          <li class="never" data-hits="" data-linenumber="44">
             
             
 
@@ -620,18 +609,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="46">
+          <li class="covered" data-hits="1" data-linenumber="45">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    number_temp</code>
+            <code class="ruby">    result</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="47">
+          <li class="never" data-hits="" data-linenumber="46">
             
             
 
@@ -642,7 +631,73 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
+          <li class="never" data-hits="" data-linenumber="47">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="48">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.search_corrected_sample_variance(array_of_string)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="49">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    mean = search_mean(array_of_string)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="50">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    sum = search_the_difference_amount(array_of_string, mean)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="51">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    (sum.to_f / (array_of_string.length - 1))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="52">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="53">
             
             
 
