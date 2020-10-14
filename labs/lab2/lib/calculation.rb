@@ -1,53 +1,23 @@
 class Calculation
-  def self.run(input_arg, array_of_string)
-    case input_arg
-    when 1
-      search_max(array_of_string)
-    when 2
-      search_min(array_of_string)
-    when 3
-      search_mean(array_of_string)
-    when 4
-      search_corrected_sample_variance(array_of_string)
-    end
+  def initialize(array_of_string)
+    @data = array_of_string
   end
 
-  def self.search_max(array_of_string)
-    max = array_of_string[0]
-    (1..array_of_string.length - 1).each do |i|
-      max = array_of_string[i] if max.split(',')[1].to_i < array_of_string[i].split(',')[1].to_i
-    end
-    max
+  def search_max
+    @data.max
   end
 
-  def self.search_min(array_of_string)
-    min = array_of_string[0]
-    (1..array_of_string.length - 1).each do |i|
-      min = array_of_string[i] if min.split(',')[1].to_i > array_of_string[i].split(',')[1].to_i
-    end
-
-    min
+  def search_min
+    @data.min
   end
 
-  def self.search_mean(array_of_string)
-    sum = 0
-    (0..array_of_string.length - 1).each do |i|
-      sum += array_of_string[i].split(',')[1].to_f
-    end
-    sum / array_of_string.length
+  def search_mean
+    (@data.inject { |sum, elem| sum + elem }.to_f / @data.size).round(2)
   end
 
-  def self.search_the_difference_amount(array_of_string, mean)
-    result = 0
-    (0..array_of_string.length - 1).each do |i|
-      result += (array_of_string[i].split(',')[1].to_f - mean)**2
-    end
-    result
-  end
-
-  def self.search_corrected_sample_variance(array_of_string)
-    mean = search_mean(array_of_string)
-    sum = search_the_difference_amount(array_of_string, mean)
-    (sum.to_f / (array_of_string.length - 1))
+  def search_corrected_sample_variance
+    mean = search_mean
+    sum = @data.map { |elem| (elem - mean)**2 }
+    (sum.inject(:+) / (@data.size - 1)).round(2)
   end
 end
