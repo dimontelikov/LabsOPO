@@ -7,7 +7,7 @@ RSpec.describe Calculation do
       CSV.read('./lib/exm.csv', headers: true,
                                 converters: :numeric)
     end
-    let(:array_of_string) { file['Прирост населения']}
+    let(:array_of_string) { file['Прирост населения'] }
     let(:ob_calc) { Calculation.new(array_of_string) }
     let(:search_max) { ob_calc.search_max }
     let(:search_min) { ob_calc.search_min }
